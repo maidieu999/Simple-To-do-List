@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TO-DO LIST</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <!-- <h1>SOME STUFF THAT I NEED TO DO</h1> -->
+        <div class="main__content">
+            <div class="todo__projects">
+                <div class="projects__header">
+                    <h2 class="header__title">Project <span class="projects__count" data-projects-count></span></h2>  
+                </div>
+                <ul class="project__lists" data-project-lists>
+                    <li class="project__list project__list--active">HTML</li>
+                    <li class="project__list">CSS</li>
+                    <li class="project__list">Javascript</li>
+                    <li class="project__list">Python</li>
+                    <li class="project__list">PHP</li>
+                </ul>
+                <form action="" data-new-project-form>
+                    <button class="btn btn__add-projects" data-project-btn>+</button>
+                    <label for="">
+                        <input type="text" name="newproject" id="newproject" placeholder="Add project" data-project-input>
+                    </label>
+                </form>
+            </div>
+            <div class="todo__tasks" data-tasks-container>
+                <div class="task__header">
+                    <h2 class="project__title" data-task-title>HTML</h2>
+                    <div class="project__task-count" data-task-count>3 tasks remaining</div>
+                </div>
+                <div class="task__body">
+                    <div class="task__lists" data-tasks-list-container>
+                        <div class="task__item">
+                            <input type="checkbox" name="" id="1">
+                            <label for="1">
+                                <span class="custom-checkbox">Task One</span>
+                            </label>
+                        </div>
+                        <div class="task__item">
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span class="custom-checkbox">Task Two</span>
+                            </label>
+                        </div>
+                        <div class="task__item">
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span class="custom-checkbox">Task Three</span>
+                            </label>
+                        </div>
+                        <div class="task__item">
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                <span class="custom-checkbox">Task Four</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="form--addtask" data-new-task-form>
+                    <button class="btn btn__add-task">+</button>
+                    <label for="">
+                        <input type="text" name="newtask" id="newtask" placeholder="Add Task" data-new-task-input>
+                    </label>
+                </form>
+                <div class="delete">
+                    <button class="delete__complete-tasks" data-delete-task-button>Clear Completed Tasks</button>
+                    <button class="delete__project" data-delete-project-button>Delete Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="task-template">
+        <div class="task__item">
+            <input type="checkbox" name="" id="">
+            <label for="">
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
+    <script src="main.js"></script>
+</body>
+</html>
